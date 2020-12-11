@@ -14,7 +14,11 @@ def game():
     clear()
     print(logo)
 # Todo 4 : assign a if not previous_A else from game data
-
+if not previous_a:
+    a= random.choice(data)
+else:
+    a = previous_a
+print(a)
 # Todo 5 : assign b
 
 # Todo 6 :function greater(a,b)
