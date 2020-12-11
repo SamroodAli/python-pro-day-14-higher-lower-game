@@ -9,6 +9,7 @@ score =0
 previous_a  = None
 def higher_or_lower_game(score,previous_a):
     # Todo 3.1 : clear screen and logo
+    clear()
     print(logo)
     # Todo 3 : game function
     def game(score,previous_a):
@@ -48,12 +49,11 @@ def higher_or_lower_game(score,previous_a):
             previous_a=None
             return (score,previous_a)
         
-    game , previous_a = game(score,previous_a)
+    score , previous_a = game(score,previous_a)
     # print score
     # Todo 10 : continue ? if yes, call game function again
     continue_playing = input("Do you want to continue playing ?:  ").lower()
     if continue_playing =='y':
-        clear()
         return higher_or_lower_game(score,previous_a)
 # game launch
 higher_or_lower_game(score,previous_a)
