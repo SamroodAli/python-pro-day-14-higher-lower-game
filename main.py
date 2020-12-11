@@ -53,4 +53,6 @@ def game(score,previous_a):
 game , previous_a = game(score,previous_a)
 # print score
 print(f"score: {score}")
-continue_playing = input("Do you want to continue playing ?:  ")
+continue_playing = input("Do you want to continue playing ?:  ").lower()
+if continue_playing =='y':
+    game(score,previous_a)
