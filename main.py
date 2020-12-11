@@ -5,6 +5,8 @@ from game_data import data
 from replit import clear
 
 # Todo 2 : score, previous_a
+score =0
+previous_a  = None
 
 # Todo 3 : game function
     # Todo 3.1 : clear screen and logo
