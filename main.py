@@ -28,15 +28,16 @@ def greater(a,b):
         return 'a'
     else:
         return 'b'
+# Todo 7:print a and b
+
+# Todo 8 : recieve input
 
 
-# Todo 7 : recieve input
+# Todo 9 : check if correct
+    # Todo 9.1 : if correct, add score, update previous_a and continue game
 
-# Todo 8 : check if correct
-    # Todo 8.1 : if correct, add score, update previous_a and continue game
+    # Todo 9.2 : else, clear screen, print a,b and score
 
-    # Todo 8.2 : else, clear screen, print a,b and score
-
-# Todo 9 : continue ? if yes, call game function again
+# Todo 10 : continue ? if yes, call game function again
 
 game()
