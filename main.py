@@ -23,6 +23,12 @@ print(a)
 b= random.choice(data)
 
 # Todo 6 :function greater(a,b)
+def greater(a,b):
+    if ['follower_count'] > b['follower_count']:
+        return 'a'
+    else:
+        return 'b'
+
 
 # Todo 7 : recieve input
 
