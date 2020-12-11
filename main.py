@@ -24,18 +24,18 @@ def game():
 
 # Todo 6 :function greater(a,b)
     def greater(a,b):
-        if ['follower_count'] > b['follower_count']:
+        if a['follower_count'] > b['follower_count']:
             return 'a'
         else:
             return 'b'
-            
+
     greater = greater(a,b)
 # Todo 7:print a and b
     print(f"Compare A: {a['name']}, a {a['description']} from {a['country']}")
     print(vs)
     print(f"Compare B: {b['name']}, a {b['description']} from {b['country']}")
 # Todo 8 : recieve input
-    
+    user_input = input("Who has more followers? Type 'A' or 'B': ")
 
 # Todo 9 : check if correct
     # Todo 9.1 : if correct, add score, update previous_a and continue game
