@@ -1,4 +1,8 @@
-# Todo 1 :import game_data,random
+# Todo 1 :import game_data,random, logo and vs
+from art import logo,vs
+import random
+from game_data import data
+from replit import clear
 
 # Todo 2 : score, previous_a
 
