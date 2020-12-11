@@ -9,8 +9,10 @@ score =0
 previous_a  = None
 
 # Todo 3 : game function
+def game():
     # Todo 3.1 : clear screen and logo
-
+    clear()
+    print(logo)
 # Todo 4 : assign a if not previous_A else from game data
 
 # Todo 5 : assign b
@@ -25,3 +27,5 @@ previous_a  = None
     # Todo 8.2 : else, clear screen, print a,b and score
 
 # Todo 9 : continue ? if yes, call game function again
+
+game()
