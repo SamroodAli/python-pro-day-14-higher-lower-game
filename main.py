@@ -15,13 +15,13 @@ def higher_or_lower_game(score,previous_b):
     def game(score,previous_b):
     # Todo 5 : assign b
         if not previous_b:
-            b= random.choice(data)
+            a= random.choice(data)
         else:
-            b = previous_b
+            a = previous_b
     # Todo 4 : assign a if not previous_b else from game data
-        a= random.choice(data)
+        b= random.choice(data)
         while a == b:
-            a = random.choice(data)
+            b = random.choice(data)
     # Todo 6 :function greater(a,b)
         def greater(a,b):
             if a['follower_count'] > b['follower_count']:
@@ -54,7 +54,7 @@ def higher_or_lower_game(score,previous_b):
     score , previous_b = game(score,previous_b)
     # print score
     # Todo 10 : continue ? if yes, call game function again
-    continue_playing = input("Do you want to continue playing ?:  ").lower()
+    continue_playing = input("Do you want to continue playing ? y for yes:  ").lower()
     if continue_playing =='y':
         return higher_or_lower_game(score,previous_b)
 # game launch
