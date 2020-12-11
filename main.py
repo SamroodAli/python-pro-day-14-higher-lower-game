@@ -20,6 +20,7 @@ else:
     a = previous_a
 print(a)
 # Todo 5 : assign b
+b= random.choice(data)
 
 # Todo 6 :function greater(a,b)
 
