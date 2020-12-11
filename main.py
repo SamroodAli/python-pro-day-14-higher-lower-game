@@ -35,7 +35,7 @@ def game():
     print(vs)
     print(f"Compare B: {b['name']}, a {b['description']} from {b['country']}")
 # Todo 8 : recieve input
-    user_input = input("Who has more followers? Type 'A' or 'B': ")
+    user_input = input("Who has more followers? Type 'A' or 'B': ").lower()
 
 # Todo 9 : check if correct
     # Todo 9.1 : if correct, add score, update previous_a and continue game
