@@ -9,7 +9,7 @@ score =0
 previous_a  = None
 
 # Todo 3 : game function
-def game():
+def game(score,previous_a):
     # Todo 3.1 : clear screen and logo
     clear()
     print(logo)
@@ -39,9 +39,13 @@ def game():
 
 # Todo 9 : check if correct
     # Todo 9.1 : if correct, add score, update previous_a and continue game
+    if user_input == greater:
+        score += 1
+        previous_a = a
+
 
     # Todo 9.2 : else, clear screen, print a,b and score
 
 # Todo 10 : continue ? if yes, call game function again
 
-game()
+game(score,previous_a)
