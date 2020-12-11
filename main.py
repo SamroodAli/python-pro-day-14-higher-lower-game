@@ -11,7 +11,6 @@ previous_a  = None
 # Todo 3 : game function
 def game(score,previous_a):
     # Todo 3.1 : clear screen and logo
-    clear()
     print(logo)
 # Todo 4 : assign a if not previous_A else from game data
 
@@ -40,12 +39,18 @@ def game(score,previous_a):
 # Todo 9 : check if correct
     # Todo 9.1 : if correct, add score, update previous_a and continue game
     if user_input == greater:
+        print("You are correct")
         score += 1
         previous_a = a
-
+        return (score,previous_a)
 
     # Todo 9.2 : else, clear screen, print a,b and score
-
+    else:
+        print("You are wrong")
+        return (score,previous_a)
 # Todo 10 : continue ? if yes, call game function again
 
-game(score,previous_a)
+game , previous_a = game(score,previous_a)
+# print score
+print(f"score: {score}")
+continue_playing = input("Do you want to continue playing ?:  ")
