@@ -7,52 +7,53 @@ from replit import clear
 # Todo 2 : score, previous_a
 score =0
 previous_a  = None
-
-# Todo 3 : game function
-def game(score,previous_a):
+def higher_or_lower_game(score,previous_a):
     # Todo 3.1 : clear screen and logo
     print(logo)
-# Todo 4 : assign a if not previous_A else from game data
-
-    if not previous_a:
-        a= random.choice(data)
-    else:
-        a = previous_a
-# Todo 5 : assign b
-    b= random.choice(data)
-
-# Todo 6 :function greater(a,b)
-    def greater(a,b):
-        if a['follower_count'] > b['follower_count']:
-            return 'a'
+    # Todo 3 : game function
+    def game(score,previous_a):
+    # Todo 4 : assign a if not previous_A else from game data
+        if not previous_a:
+            a= random.choice(data)
         else:
-            return 'b'
-
-    greater = greater(a,b)
-# Todo 7:print a and b
-    print(f"Compare A: {a['name']}, a {a['description']} from {a['country']}")
-    print(vs)
-    print(f"Compare B: {b['name']}, a {b['description']} from {b['country']}")
-# Todo 8 : recieve input
-    user_input = input("Who has more followers? Type 'A' or 'B': ").lower()
-
-# Todo 9 : check if correct
-    # Todo 9.1 : if correct, add score, update previous_a and continue game
-    if user_input == greater:
-        print("You are correct")
-        score += 1
-        previous_a = a
-        return (score,previous_a)
-
-    # Todo 9.2 : else, clear screen, print a,b and score
-    else:
-        print("You are wrong")
-        return (score,previous_a)
-# Todo 10 : continue ? if yes, call game function again
-
-game , previous_a = game(score,previous_a)
-# print score
-print(f"score: {score}")
-continue_playing = input("Do you want to continue playing ?:  ").lower()
-if continue_playing =='y':
-    game(score,previous_a)
+            a = previous_a
+    # Todo 5 : assign b
+        b= random.choice(data)
+    # Todo 6 :function greater(a,b)
+        def greater(a,b):
+            if a['follower_count'] > b['follower_count']:
+                return 'a'
+            else:
+                return 'b'
+        greater = greater(a,b)
+    # Todo 7:print a and b
+        print(f"Compare A: {a['name']}, a {a['description']} from {a['country']}")
+        print(vs)
+        print(f"Compare B: {b['name']}, a {b['description']} from {b['country']}")
+    # Todo 8 : recieve input
+        user_input = input("Who has more followers? Type 'A' or 'B': ").lower()
+    # Todo 9 : check if correct
+        # Todo 9.1 : if correct, add score, update previous_a and continue game
+        if user_input == greater:
+            print("You are correct")
+            score += 1
+            print(f"score: {score}")
+            previous_a = a
+            return (score,previous_a)
+        # Todo 9.2 : else, clear screen, print a,b and score
+        else:
+            print("You are wrong")
+            print(f"score: {score}")
+            score = 0
+            previous_a=None
+            return (score,previous_a)
+        
+    game , previous_a = game(score,previous_a)
+    # print score
+    # Todo 10 : continue ? if yes, call game function again
+    continue_playing = input("Do you want to continue playing ?:  ").lower()
+    if continue_playing =='y':
+        clear()
+        return higher_or_lower_game(score,previous_a)
+# game launch
+higher_or_lower_game(score,previous_a)
